@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer my-custom-style {
+      .trans-gallery{
+        transition: all 1s ease-in-out;
+      }
+}
+
+/* Navbar */
+.nav-link {
+  @apply p-2 m-2;
+}
+
+.nav-text {
+  @apply hover:text-yellow-300 transition;
+}
+
+.feedback-triangle {
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.events_header {
+  background-image: url("https://assets.api.uizard.io/api/cdn/stream/fab729b7-cf78-4f2c-afd9-c230331e7934.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.custom_divide{
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.footer_icons a{
+  @apply hover:text-yellow-400
+}
+
+.gallery_transition {
+  @apply hover:w-2/3 transition-all duration-500 ease-in-out
+}
+
+.typewriter{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+   /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}

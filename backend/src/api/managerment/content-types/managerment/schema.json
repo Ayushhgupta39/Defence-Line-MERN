@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "managerments",
+  "info": {
+    "singularName": "managerment",
+    "pluralName": "managerments",
+    "displayName": "managerment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
